@@ -3,13 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Frontend Mentor | Calculator app</title>
 </head>
-<body>
+<body class="theme-1">
+<div id="calculator">
+    <div id="header">
+        <p id="calc-text">calc</p>
+        <div id="themes">
+            <div id="theme-text-container">
+                <p id="theme-text">THEME</p>
+            </div>
+            <div id="toggle-theme">
+                <div id="theme-labels">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+                <div id="theme-selector">
+                    <input type="radio" name="theme" class="radio-input" id="t1" value="theme-1" checked/>
+                    <input type="radio" name="theme" class="radio-input" id="t2" value="theme-2"/>
+                    <input type="radio" name="theme" class="radio-input" id="t3" value="theme-3"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="screen">
+        <p id="result"></p>
+    </div>
+    <div id="buttons">
+        <button class="button" onclick="addNumber('7')">7</button>
+        <button class="button" onclick="addNumber('8')">8</button>
+        <button class="button" onclick="addNumber('9')">9</button>
+        <button class="button" onclick="deleteNumber()" id="del">DEL</button>
 
+        <button class="button" onclick="addNumber('4')">4</button>
+        <button class="button" onclick="addNumber('5')">5</button>
+        <button class="button" onclick="addNumber('6')">6</button>
+        <button class="button" onclick="addOperators('+')">+</button>
+
+        <button class="button" onclick="addNumber('1')">1</button>
+        <button class="button" onclick="addNumber('2')">2</button>
+        <button class="button" onclick="addNumber('3')">3</button>
+        <button class="button" onclick="addOperators('-')">-</button>
+
+        <button class="button" onclick="addNumber('.')">.</button>
+        <button class="button" onclick="addNumber('0')">0</button>
+        <button class="button" onclick="addOperators('/')">/</button>
+        <button class="button" onclick="addOperators('*')">x</button>
+
+        <button class="button" onclick="reset()" id="reset">RESET</button>
+        <button class="button" onclick="calculate()" id="eval">=</button>
+    </div>
+</div>
+<script src="index.js"></script>
 </body>
 </html>
