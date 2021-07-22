@@ -79,3 +79,15 @@ radios.forEach(radio => {
         document.body.className = e.target.value;
     })
 })
+
+document.querySelector('#del').addEventListener('click', deleteNumber);
+document.querySelector('#reset').addEventListener('click', reset);
+document.querySelector('#eval').addEventListener('click', calculate);
+
+document.querySelectorAll('.number').forEach(btn => {
+    btn.addEventListener('click', (e) => addNumber(e.target.value))
+})
+
+document.querySelectorAll('.operator').forEach(op => {
+    op.addEventListener('click', (e) => addOperators(e.target.value))
+})
